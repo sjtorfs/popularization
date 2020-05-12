@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<title>Popularization</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="tempstyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#gal" class="w3-button w3-block w3-black">GALAXIES</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#fir" class="w3-button w3-block w3-black">FAR INFRARED RADIATION</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#sed" class="w3-button w3-block w3-black">SPECTRAL ENERGY DISTRIBUTION</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+
+<div class="w3-sand w3-grayscale w3-large">
+
+​
+
+<!-- About Container -->
+
+<div class="w3-container" id="gal">
+
+  <div class="w3-content" style="max-width:700px">
+
+    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">GALAXIES</span></h3>
+
+<p>Like the Moon orbits the Earth, the Earth orbits the Sun, and the Sun orbits a black hole. Where the moon is the sole companion of the Earth, the Earth has to share the Sun with at least seven other planets. And the Sun? Well, it has to share the black hole with billions of other stars. This huge collection of stars is called a galaxy, specifically our galaxy is called the Milky Way. But there are plenty of other galaxies out there. It is not possible to count them all, but estimates suggest there are at least one hundred billion of them.</p>
+
+<p>Unless you live in very remote place, you can most likely not even see the brightest one of them with the naked eye. Galaxies are so dim they can only be seen with a telescope. Using a telescope however offers another big advantage. It allows you to see "colors" that can not even be detected by the human eye such as ultraviolet (UV) and infrared (IR) light. Detecting these additional colors is very useful. If you compare a galaxy to a glass of smoothie, you realise that the color says a lot about the content. If your smoothie is green you might assume that it contains a lot of kiwi, if it is red it could very well contain strawberries. The same goes for a galaxy. If a galaxy is bright in UV it contains many young stars. If it is bright in the IR it contains a lot of dust. So detecting these colors can give us additional information about the content of a galaxy.</p>
+
+<img src="smoothie-galaxy.png" width = "600">
+
+</div></div>
+
+<div class="w3-container" id="fir">
+
+  <div class="w3-content" style="max-width:700px">
+
+    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">FAR INFRARED RADIATION</span></h3>
+
+<p>There is one specific shade of IR however that is terribly difficult to detect. This is called the far infrared (FIR). When arranging all colors according to the rainbow this is the part of the IR that is the furthest from the optical colors. The first big problem with this FIR is that the atmosphere of the Earth blocks it and it can therefore only be seen from space. Although this is obviously an expensive endeavour, there have already been a lot of telescopes launched in space. The second big problem however is that FIR telescopes have a very limited lifetime due to technical difficulties that can not be avoided. They usually last a couple of years at the most. At the moment there is no such telescope operational and so no new FIR observations can be made right now.</p>
+
+<p>This summons the question of whether we really need to observe this FIR. Can we not get the same information elsewhere? If you observe a galaxy in the UV, optical and IR can you not make a guess of what the FIR will be? The answer is yes. You can get such a guess based on the other observations, or at least a computer can, through machine learning. Machine learning is a branch of artificial intelligence where computers get to learn from data. For example, you could show a computer a lot of handwritten digits and then tell it which digits they are. After seeing enough examples the computer becomes capable of recognizing handwritten digits on its own. The same principle can be used for predicting the FIR. We collect a lot of galaxies for which the FIR was already observed by an old space telescope. We show these to the computer along with the observations for the other colors. Then after seeing enough examples the computer is able to estimate the FIR based on the other colors with reasonable accuracy.</p>
+
+</div></div>
+
+<div class="w3-container" id="sed">
+
+  <div class="w3-content" style="max-width:700px">
+
+    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">SPECTRAL ENERGY DISTRIBUTION</span></h3>
+
+<p>Now lets make this a bit more concrete. The plot below shows the so called spectral energy distribution of a galaxy. The x-axis shows a range of twenty broadbands. Broadbands are a wide range of colors for which the total light can be observed by a telescope. In the plot below they are arranged in the order of the rainbow. From left to right these broadbands are: two UV bands, five optical bands, and thirteen in the IR. The last five of these are FIR bands. The y-axis shows the amount of light detected for each band. Notice that the curve starts low. This means that there is not a lot of UV detected. Going further towards the optical the curve rises. That is because most stars emit light in this range. When moving into the IR it drops again but in the FIR it reaches a second bump. This second bump is caused by dust in galaxies, which emits mainly FIR.</p>
+
+<script src="static.js" id="8cdf9bd9-538f-419b-b051-22d4a4255bb2"></script>
+
+<p>Now that you know what a galaxy is and how it is characterised by its spectral energy distribution, we will try to create our own galaxy in three steps.</p>
+
+<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Step 1: Choosing the input</span></h5>
+
+<p>Lets take a closer look at the spectral energy distribution of the first fifteen bands. With the sliders on the right you can choose the shape of the curve. This can be anything you like, we are creating our own galaxy after all. As there are fifteen bands there technically could have been fifteen sliders, but with that much control over the exact shape of the curve the result would turn into an extremely unrealistic galaxy very soon. The sliders allow you to change three bands, one in UV, one in the optical, and one in the IR. The other bands will just follow along and take whatever value that keeps the galaxy somewhat realistic.</p>
+
+<script src="uvmir.js" id="fde53e85-c815-49a0-af98-356857489f06"></script>
+
+<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Step 2: Predicting the far infrared</span></h5>
+
+<p>For the next step we add the FIR to the curve. It is now up to the computer to estimate what this FIR is going to be based on the other fifteen bands that we chose as input. To be able to do this the computer has taken a look at over 7000 galaxies for which it knew the FIR. We can now present it with our self made galaxy and see what it outputs for the FIR.</p>
+
+<script src="fir.js" id="a62bfbde-a9c4-40f2-b087-9738d2e12922"></script>
+
+<p>Notice that whatever you give as input, the second bump always comes back. It looks like the computer has learned that this is a physically important feature. Also you can notice that the FIR seems to change the most when you change the UV. This turns out to be another physically motivated relation.</p>
+
+<h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Step 3: Comparing to real galaxies</span></h5>
+
+<p>In this final step you can compare your galaxy with a collection of real galaxies. The plots below show the UV, optical and IR values for a set of observed galaxies. You can see that they group together. This mean that not just any combination of the three bands is physically realistic. The red cross on these plots indicates the location of your galaxy. If it is nowhere near the group of real ones it means your galaxy is unlikely to really exist.</p>
+
+<script src="pca.js" id="d26bc1f7-94cb-41e9-92b2-e072e27e9847"></script>
+
+<p>Cover photo: <a href="https://www.flickr.com/photos/astroporn/4999978603/">Adam Evans</a><br>
+Illustration: Karlien Wuytack</p>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
